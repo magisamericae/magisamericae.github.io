@@ -64,7 +64,7 @@ header{
   grid-area: header;
   height:130px;
   width:100vw;
-  background-color: #424949 ;
+  background-color: red ;
 
 
 
@@ -667,7 +667,7 @@ a:hover{
         margin-right: -20px;
       }
       .test,.slider-wrapper {
-        width:100%;
+        width:auto;
         height:300px;
       }
 
@@ -700,7 +700,7 @@ a:hover{
         font-size: 120%;
       }
       .test,.slider-wrapper {
-        width:100%;
+        width:auto;
         height:250px;
       }
       .prev{
