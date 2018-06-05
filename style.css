@@ -97,7 +97,7 @@ h1{
   margin-left: 5px;;
 
 }
-h4{
+h2{
   font-size: 40px;
   margin-left: 10px;
   letter-spacing: 5px;
@@ -176,13 +176,13 @@ h4{
 
 }
 
-h2{
+h3{
   font-size: 30px;
   color: white;
   font-family: 'Ubuntu Condensed', sans-serif;
 
 }
-h3{
+h4{
   font-size: 20px;
   color: white;
   font-family: 'Ubuntu Condensed', sans-serif;
@@ -366,6 +366,7 @@ footer{
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   padding-top: 15px;
+  color:#F8F9F9;
 }
 a{
   text-decoration: none;
@@ -535,7 +536,7 @@ a:hover{
     margin-left: 4vw;
   }
 
-  h4{
+  h2{
     font-size:180%;
 
   }
@@ -548,7 +549,7 @@ a:hover{
 
   @media screen and (max-width:1077px) {
 
-    h4{
+    h2{
       font-size: 150%;
     }
     h1{
@@ -557,7 +558,7 @@ a:hover{
   }
   @media screen and (max-width:1000px) {
 
-    h1,h4{
+    h1,h2{
       font-size: 180%;
     }
     header{
@@ -646,7 +647,7 @@ a:hover{
         font-size:200%;
       }
 
-      h1, h4{
+      h1, h2{
         font-size: 150%;;
       }
     }
@@ -664,7 +665,7 @@ a:hover{
     }
 
     @media screen and (max-width:414px) {
-      h4{
+      h2{
         width:auto;
       }
       h1{
@@ -703,7 +704,7 @@ a:hover{
 
     }
     @media screen and (max-width:320px) {
-      h1,h4{
+      h1,h2{
         font-size: 120%;
       }
       .test,.slider-wrapper {
@@ -717,7 +718,7 @@ a:hover{
         margin-left: 130px;
       }
       .footertext{
-        font-size: 80%;
+        font-size: 80
       }
 
     }
