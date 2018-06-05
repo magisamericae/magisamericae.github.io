@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Magis Americae</title>
+  <link rel='shortcut icon' type='image/x-icon' href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+</head>
+<body>
+<div id="grid2">
+
+  <header>
+  <a href="index.html"><img id="logo" src="logo2.jpg" alt="logga"></a>
+
+  <div id="titel"> <h1> MAGIS AMERICAE</h1> <h4> UPPTÄCK AMERIKA </h4> </div>
+
+  <div id="menuToggle">
+
+    <input type="checkbox" />
+
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <nav id="menu">
+      <a class="list" href="index.html">Hem</a>
+      <a class="list" href="destinationer.html">Destinationer</a>
+      <a class="list" href="om.html">Om USA</a>
+      <a class="list" href="#">Vad är Magis Americae?</a>
+      
+</nav>
+  </div>
+</header>
+
+
+  <div class="slider">
+
+    <div class="slider-wrapper">
+      <div class="inner-wrapper">
+
+        <div class="slide">
+
+          <img class="test" src="grandcanyon2.jpg" alt="Grand Canyon">
+        </div>
+
+        <div class="slide">
+          <div class="info">
+            <h2 class="plats">Grand Canyon</h2>
+            <h3 class="plats2"> Arizona USA</h3>
+          </div>
+          <img class="test" src="nr1.jpg" alt="Grand Canyon">
+        </div>
+
+        <div class="slide">
+
+          <img class="test" src="grandcanyon3.jpg" alt="Grand Canyon">
+        </div>
+
+      </div>
+
+    </div>
+    <div class="button prev"></div>
+    <div class="button next"></div>
+  </div>
+<article>
+  <h2 class="underrubrik"> Grand Canyon</h2>
+  <p class="brödtext"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+   in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+   cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+</article>
+
+<section id="fact">
+  <div id="flex">
+  <img id="ko" src="kossor2.jpg" alt="kossor">
+</div>
+<div id="text">
+  <h4>FUN FACT</h4>
+  <p id="funfact"> Visste du att i den amerikanska staten Montana finns det tre gånger fler kossor än människor! <br>Det betyder att 3 miljoner kossor befinner sig i Montana.</p>
+  </div>
+</section>
+
+</div>
+<footer>
+</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+
+  $(".button").show();
+  $(function() {
+
+    var inWrap = $('.inner-wrapper');
+
+    $('.prev').on('click', function() {
+
+      inWrap.animate({left: '0%'}, 800, function(){
+
+        inWrap.css('left', '-100%');
+
+        $('.slide').first().before($('.slide').last());
+
+      });
+
+
+    });
+
+
+
+    $('.next').on('click', function() {
+
+      inWrap.animate({left: '-200%'}, 800, function(){
+
+        inWrap.css('left', '-100%');
+
+        $('.slide').last().after($('.slide').first());
+
+      });
+
+
+    });
+
+
+  })
+  </script>
+
+
+</body>
+</html>
