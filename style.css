@@ -560,7 +560,14 @@ a:hover{
       width: 280px;
       height: 280px;
     }
+    .prev:hover{
+      transform: rotate(-45deg) scale(1.0);
 
+    }
+    .next:hover{
+      transform: rotate(45deg) scale(1.0);
+
+    }
 
   }
 
@@ -579,6 +586,7 @@ a:hover{
       width:auto;
 
     }
+
 
     @media screen and (max-width:766px) {
       .test,.slider-wrapper{
@@ -701,12 +709,5 @@ a:hover{
       .next{
         margin-left: 130px;
       }
-      .prev:hover{
-        transform: rotate(-45deg) scale(1.0);
 
-      }
-      .next:hover{
-        transform: rotate(45deg) scale(1.0);
-
-      }
     }
