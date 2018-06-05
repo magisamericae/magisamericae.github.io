@@ -357,9 +357,16 @@ footer{
   height:130px;
   width:100vw;
   background-color: #424949 ;
+  display: flex;
+  justify-content: space-around;
+
 
 }
-
+.footertext{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  padding-top: 15px;
+}
 a{
   text-decoration: none;
   color: #232323;
@@ -708,6 +715,9 @@ a:hover{
       }
       .next{
         margin-left: 130px;
+      }
+      .footertext{
+        font-size: 80%;
       }
 
     }
