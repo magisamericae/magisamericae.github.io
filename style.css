@@ -10,8 +10,8 @@
 #grid,#grid2,#grid3,#grid4{
   display: -ms-grid;
   display: grid;
-  grid-template-columns: fr fr fr fr;
-  -ms-grid-columns: fr fr fr fr;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  -ms-grid-columns: 25vw 25vw 25vw 25vw;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
 
@@ -713,7 +713,7 @@ a:hover{
       }
 
       .footertext{
-        font-size: 80
+        font-size: 80px;
       }
 
     }
