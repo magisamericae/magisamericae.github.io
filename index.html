@@ -79,18 +79,19 @@
     <div class="button next"></div>
   </div>
 
-<section id="fact">
-  <div id="flex">
+<section class="fact">
+  <div class="flex">
   <img id="ko" src="kossor2.jpg" alt="kossor">
 </div>
-<div id="text">
+<div class="text">
   <h2>FUN FACT</h2>
-  <p id="funfact"> Visste du att i den amerikanska staten Montana finns det tre gånger fler kossor än människor! <br>Det betyder att 3 miljoner kossor befinner sig i Montana.</p>
+  <p class="funfact"> Visste du att i den amerikanska staten Montana finns det tre gånger fler kossor än människor! <br>Det betyder att 3 miljoner kossor befinner sig i Montana.</p>
   </div>
 </section>
-<div id="pop">
-  <h2 id="popdest"> Populäraste Destinationerna</h2>
-<div id="populär">
+
+<section class="destinationer">
+  <h2 class="desttext">Destinationerna</h2>
+<div class="destflex">
 <a class="länk" href="grandcanyon.html">
 <img class="cirkel"src="grand2.png" alt="grand canyon">
 </a>
@@ -102,7 +103,8 @@
 </a>
 
 </div>
-</div>
+</section>
+
 <footer>
 
     <p class="footertext"> Magis Americae &reg; <br> Kontakt: <br> Idrottsgatan 3 <br> 46236 Vänersborg <br> 0704925395</p>
@@ -111,44 +113,9 @@
 
 </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
 
-  $(".button").show();
-  $(function() {
+  <script src="javascript.js"></script>
 
-    var inWrap = $('.inner-wrapper');
-
-    $('.prev').on('click', function() {
-
-      inWrap.animate({left: '0%'}, 800, function(){
-
-        inWrap.css('left', '-100%');
-
-        $('.slide').first().before($('.slide').last());
-
-      });
-
-
-    });
-
-
-
-    $('.next').on('click', function() {
-
-      inWrap.animate({left: '-200%'}, 800, function(){
-
-        inWrap.css('left', '-100%');
-
-        $('.slide').last().after($('.slide').first());
-
-      });
-
-
-    });
-
-
-  })
-  </script>
 
 
 </body>

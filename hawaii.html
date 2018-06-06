@@ -31,7 +31,7 @@
       <a class="list" href="index.html">Hem</a>
       <a class="list" href="destinationer.html">Destinationer</a>
       <a class="list" href="om.html">Om USA</a>
-      <a class="list" href="#">Vad är Magis Americae?</a>
+      <a class="list" href="vad.html">Vad är Magis Americae?</a>
 
 </nav>
   </div>
@@ -77,62 +77,26 @@
 
 </article>
 
-<section id="fact">
-  <div id="flex">
-  <img id="ko" src="kossor2.jpg" alt="kossor"> </img>
-</div>
-<div id="text">
-  <h2>FUN FACT</h2>
-  <p id="funfact"> Hawaii är den mest isolerande platsen på jorden där det bor människor. Ögruppen ligger 3846 kilometer ifrån Kalifornien, 6196 kilometer ifrån Japan, 78856 kilometer från Kina och 8497 kilometer från Filippinerna</p>
-  </div>
-</section>
 
+<section class="fact2">
+  <div class="flex">
+  <img id="ko" src="kossor2.jpg" alt="kossor">
 </div>
+<div class="text">
+  <h2>FUN FACT</h2>
+  <p class="funfact">   <p id="funfact"> Hawaii är den mest isolerande platsen på jorden där det bor människor. Ögruppen ligger 3846 kilometer ifrån Kalifornien, 6196 kilometer ifrån Japan, 78856 kilometer från Kina och 8497 kilometer från Filippinerna</p>
+Visste du att i den amerikanska staten Montana finns det tre gånger fler kossor än människor! <br>Det betyder att 3 miljoner kossor befinner sig i Montana.</p>
+  </div>
+
+</section>
 
 <footer>
     <p class="footertext"> Magis Americae &reg; <br> Kontakt: <br> Idrottsgatan 3 <br> 46236 Vänersborg <br> 0704925395</p>
     <p class="footertext"> Hemsidan är ett skolarbete  <br> Skapad av: Emil Eriksson <br> Våren 2018 <br> Webbutveckling 1</p>
 </footer>
-
+</div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-
-  $(".button").show();
-  $(function() {
-
-    var inWrap = $('.inner-wrapper');
-
-    $('.prev').on('click', function() {
-
-      inWrap.animate({left: '0%'}, 800, function(){
-
-        inWrap.css('left', '-100%');
-
-        $('.slide').first().before($('.slide').last());
-
-      });
-
-
-    });
-
-
-
-    $('.next').on('click', function() {
-
-      inWrap.animate({left: '-200%'}, 800, function(){
-
-        inWrap.css('left', '-100%');
-
-        $('.slide').last().after($('.slide').first());
-
-      });
-
-
-    });
-
-
-  })
-  </script>
+  <script src="javascript.js"></script>
 
 
 </body>

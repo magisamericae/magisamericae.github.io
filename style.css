@@ -8,53 +8,25 @@
 
 }
 #grid,#grid2,#grid3,#grid4{
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 25vw 25vw 25vw 25vw;
-  grid-template-rows: auto ;
-  grid-row-gap: 10vh;
+  grid-template-columns: fr fr fr fr;
+  -ms-grid-columns: fr fr fr fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+
 
 }
-#grid{
-  grid-template-areas:
-  "header header header header"
-  "slider slider slider slider"
-  " .fact fact ."
-  " cirkel cirkel cirkel cirkel"
-  "footer footer footer footer"
 
-}
-#grid2{
-  grid-template-areas:
-  "header header header header"
-  "slider slider slider slider"
-  " article article article article"
-  " .fact fact ."
-  "footer footer footer footer"
-
-}
-#grid3{
-  grid-template-areas:
-  "header header header header"
-  "cirkel cirkel cirkel cirkel"
-  "footer footer footer footer"
-
-}
-#grid4{
-  grid-template-areas:
-  "header header header header"
-  "om om om om"
-  "footer footer footer footer"
-
-}
 
 body {
-  font-family: 'Montserrat', sans-serif;
+
   color: #333;
-  height: 94vh;
+  height: auto;
   position: relative;
   background-color:#F8F9F9;
   overflow-x: hidden;
-  height:100%;
+
 
 }
 .länk{
@@ -65,11 +37,14 @@ body {
 header{
   display: flex;
   align-items: center;
-  grid-area: header;
   height:130px;
   width:100vw;
   background-color: #424949 ;
-
+  grid-column: 1/5;
+  grid-row:1;
+  -ms-grid-column: 1/5;
+  -ms-grid-row:1;
+  margin-bottom: 10vh;
 
 
 
@@ -105,26 +80,28 @@ h2{
   font-family: 'Ubuntu Condensed', sans-serif;
 
 }
+p{
+  font-family: 'Montserrat', sans-serif;
+}
 #logo{
   width: 100px;
   height:100px;
   margin-left: 1vw;
 }
-#om{
-  grid-area: om;
-  width:90vw;
-  height:autp;
-  background-color: #424949;
-  justify-self:center;
 
-}
 .slider {
-  grid-area: slider;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
   overflow-y: hidden;
+  width:auto;
+  grid-column: 1/5;
+  grid-row:2;
+  -ms-grid-column: 1/5;
+  -ms-grid-row:2;
+  margin-bottom: 10vh;
+
 
 
 
@@ -205,7 +182,7 @@ h4{
 }
 
 .prev {
-  margin-left: -530px;
+  left:2%;
   border-left: 5px solid black;
 
 
@@ -215,7 +192,7 @@ h4{
 .next {
   border-right: 5px solid black;
   transform: rotate(45deg);
-  margin-left:530px;
+  right:2%;
 
 
 
@@ -244,7 +221,13 @@ article{
   width:90vw;
   height:auto;
   background-color: #424949;
-  grid-area: article;
+  grid-column: 1/5;
+  grid-row:3;
+  -ms-grid-column: 1/5;
+  -ms-grid-row:3;
+  -ms-grid-column-align: center;
+  margin-bottom: 10vh;
+
   justify-self:center;
 
 }
@@ -277,24 +260,36 @@ article{
   padding: 0% 3% 3% 3%;
   color: #F8F9F9;
 }
-#fact{
-  grid-area:fact;
+.fact,.fact2{
+
   display: flex;
   align-items:center;
-  height:300px;
+  height: auto;
   width:90vw;
   background-color: #424949;
   justify-self:center;
+  grid-column: 1/5;
+  grid-row:3;
+  -ms-grid-column: 1/5;
+  -ms-grid-row:3;
+  -ms-grid-column-align: center;
+  margin-bottom: 10vh;
 
 
 }
-#flex{
+.fact2{
+    -ms-grid-row:4;
+      grid-row:4;
+}
+.flex{
   width:340px;
   height:100%;
   display: flex;
   align-items:center;
+  padding-top: 4%;
+  padding-bottom: 4%;
 }
-#text{
+.text{
   width:60vw;
   height:100%;
   padding: 4%;
@@ -305,45 +300,49 @@ article{
   width:300px;
   background-color: white;
   margin-left: 4vw;
+
 }
-#funfact{
+.text{
   font-size: 30px;
 
   color:white;
-  padding-left: 3%;
+  padding: 3%;
   font-family: 'Ubuntu Condensed', sans-serif;
 
 }
-#populär{
-  height:auto;
+.destflex{
+  height:100%;
   width:auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   overflow-y: hidden;
-}
-#pop{
-  display: flex;
-  flex-direction: column;
-  grid-area: cirkel;
-  text-align: center;
-}
 
-#pop1{
-  margin-top: 5px;
-  display: flex;
-  flex-direction: column;
-  grid-area: cirkel;
-  text-align: center;
 
 }
-#popdest{
+.destinationer{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  grid-column: 1/5;
+  grid-row:4;
+  -ms-grid-column: 1/5;
+  -ms-grid-row:4;
+  -ms-grid-column-align: center;
+  margin-bottom: 10vh;
+
+}
+
+
+.desttext{
   font-size: 45px;
+  overflow-y: hidden;
 
 }
 
 .cirkel{
+
   width: 340px;
-  height: 100%;
+  height: auto;
   margin-top: 20px;
   border-radius: 50%;
 
@@ -353,12 +352,16 @@ article{
 
 }
 footer{
-  grid-area: footer;
+
   height:130px;
   width:100vw;
   background-color: #424949 ;
   display: flex;
   justify-content: space-around;
+  -ms-grid-column: 1/5;
+  -ms-grid-row: 5;
+  grid-column: 1/5;
+  grid-row: 5;
 
 
 }
@@ -500,20 +503,22 @@ a:hover{
   opacity: 1;
 }
 
-@media screen and (max-width:1250px) {
+@media screen and (max-width:1250px)  {
+
   .test,.slider-wrapper{
     width:600px;
     height:400px;
 
 
   }
+
   .prev {
-    margin-left: -350px;
+    left:10%;
 
   }
 
   .next{
-    margin-left: 350px;
+    right:10%;
   }
 
   .bottom-left{
@@ -528,7 +533,8 @@ a:hover{
 
 
 }
-@media screen and (max-width:1190px) {
+
+@media screen and (max-width:1190px){
   #ko{
     height:auto;
     width:80%;
@@ -547,7 +553,8 @@ a:hover{
     height: 300px;
   }
 
-  @media screen and (max-width:1077px) {
+
+  @media screen and (max-width:1077px){
 
     h2{
       font-size: 150%;
@@ -563,6 +570,7 @@ a:hover{
     }
     header{
       align-items: center;
+
     }
     .cirkel{
       width: 280px;
@@ -582,7 +590,7 @@ a:hover{
   @media screen and (max-width:900px) {
 
 
-    #funfact{
+    .text{
       font-size: 150%;
     }
 
@@ -590,11 +598,17 @@ a:hover{
       width:100px;
     }
 
-    #popdest{
+    .desttext{
       width:auto;
 
     }
+    @media screen and (max-width:850px){
 
+      .destflex{
+        flex-direction: column;
+        align-items: center;
+
+      }
 
     @media screen and (max-width:766px) {
       .test,.slider-wrapper{
@@ -602,15 +616,6 @@ a:hover{
         height:300px;
       }
 
-      .prev {
-        margin-left: -280px;
-
-      }
-
-      .next{
-        margin-left: 280px;
-
-      }
 
       .bottom-left{
         margin-top: 115px;
@@ -624,26 +629,26 @@ a:hover{
 
 
     }
-    @media screen and (max-width:650px) {
+    @media screen and (max-width:766px) {
+
       #ko{
         display: none;
       }
-      #text{
+      .text{
         width:100vw;
       }
-      #flex{
+
+      .flex{
         display: none;
+
       }
 
-      #populär{
-        flex-direction: column;
-        align-items: center;
-      }
-      #popdest{
+
+      .desttext{
         font-size: 250%;
       }
 
-      #popdest{
+      .desttext{
         font-size:200%;
       }
 
@@ -695,15 +700,10 @@ a:hover{
       .plats2{
         font-size: 30px;
       }
-      .prev{
-        margin-left: -160px;
-      }
-      .next{
-        margin-left: 160px;
-      }
+
 
     }
-    @media screen and (max-width:320px) {
+    @media screen and (max-width:320px){
       h1,h2{
         font-size: 120%;
       }
@@ -711,12 +711,7 @@ a:hover{
         width:auto;
         height:250px;
       }
-      .prev{
-        margin-left: -130px;
-      }
-      .next{
-        margin-left: 130px;
-      }
+
       .footertext{
         font-size: 80
       }
